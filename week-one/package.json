@@ -1,0 +1,10 @@
+{
+  "name": "week-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script1.js",
+  "keywords": [],
+  "author": "yunus",
+  "license": "ISC",
+  "type": "module"
+}
