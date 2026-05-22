@@ -10,23 +10,24 @@ const data = [
   {name: "maggie", sex: "female", age: 10},
   {name: "rita", sex: "female", age: 11},
   ]
- console.log(data);
-export function getCitizens() {
+ console.log(getOldestUser());  // object
+ 
+export function getUsers() {
   return data;
 }
- export function getAdult() {
+ export function getAdultUsers() {
     return data.filter(c => c.age >= 18);
   }
   
- export function getOldest() {
+ export function getOldestUser() {
     return data.reduce((a,b) => a.age > b.age ? a : b);
   }
   
-  export function getNames() {
+  export function getUsernames() {
     return data.map(c => c.name);
   }
   
-  export function addCitizen(name, sex, age) {
+  export function addUser(name, sex, age) {
     data.push({name, sex, age})
   }
   
