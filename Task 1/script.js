@@ -11,6 +11,8 @@ const data = [
   {name: "rita", sex: "female", age: 11},
   ]
  console.log(getOldestUser());  // object
+ console.log(getAdultUsers());  // Array of objects
+ console.log(getUsernames());  // Array
  
 export function getUsers() {
   return data;

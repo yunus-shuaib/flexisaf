@@ -4,11 +4,8 @@ const profileBoard = document.getElementById("profile-board");
 const name = document.getElementById("name");
 const sex = document.getElementById("sex");
 const age = document.getElementById("age");
-<<<<<<< HEAD
-const createBtn = document.getElementById("create-citizen-btn");
-=======
-const createBtn = document.getElementById("add-user-btn");
->>>>>>> 801d078 (Refactoring)
+
+const addUserBtn = document.getElementById("add-user-btn");
 
 function displayProfiles() {
   let users = getUsers();
@@ -25,23 +22,14 @@ function displayProfiles() {
 
 window.addEventListener("DOMContentLoaded", displayProfiles);
 
-createBtn.addEventListener("click", (e)=> {
+addUserBtn.addEventListener("click", (e)=> {
   e.preventDefault();
   if(name.value && sex.value && age.value ) {
-<<<<<<< HEAD
-    addCitizen(name.value, sex.value, age.value);
-    profileBoard.innerHTML = "";
-  displayProfiles();
-    name.value = "";
-    sex.value = "";
-    age.value = "";
-=======
     addUser(name.value, sex.value, age.value);
     profileBoard.innerHTML = "";
   displayProfiles();
   name.value = "";
   age.value = "";
->>>>>>> 801d078 (Refactoring)
      } else {
        alert("Provide required values!");
      }
