@@ -6,8 +6,6 @@ const sex = document.getElementById("sex");
 const age = document.getElementById("age");
 const createBtn = document.getElementById("create-citizen-btn");
 
-displayProfiles();
-
 function displayProfiles() {
   let citizens = getCitizens();
  // console.log(citizens);
@@ -21,12 +19,17 @@ function displayProfiles() {
 }); 
 }
 
-//window.addEventListener("DOMContentLoaded", displayProfiles);
+window.addEventListener("DOMContentLoaded", displayProfiles);
 
-createBtn.addEventListener("click", ()=> {
+createBtn.addEventListener("click", (e)=> {
+  e.preventDefault();
   if(name.value && sex.value && age.value ) {
     addCitizen(name.value, sex.value, age.value);
+    profileBoard.innerHTML = "";
   displayProfiles();
+    name.value = "";
+    sex.value = "";
+    age.value = "";
      } else {
        alert("Provide required values!");
      }
