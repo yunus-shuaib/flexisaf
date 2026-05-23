@@ -20,7 +20,8 @@ h3{
   align-items: center;
   flex-wrap: wrap;
   overflow-y: scroll;
-  height: 65vh;
+  height: 50vh;
+  margin-block-end: 10px;
 }
 
 .profile{
@@ -41,4 +42,11 @@ h3{
   gap: 10px;
   flex-direction: column;
   margin-inline: 10px;
+}
+#create-new-user div{
+  display: flex;
+  justify-content: space-between;
+}
+button{
+  width: 30%;
 }
