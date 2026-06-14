@@ -34,10 +34,6 @@ project/
 
 ---
 
-## Getting Started
-
-### 1. Clone the project
-
 ## Backend Setup (JSON Server)
 
 ### Install dependencies
