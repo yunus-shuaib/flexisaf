@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: black;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2rem;
+  background-color: #d097fede;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 60rem;
+}
+
+h2{
+ color: red; 
+}
+
+
+button{
+  padding: .5rem;
+  border-radius: .5rem;
+  }
