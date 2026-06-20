@@ -1,6 +1,6 @@
 # React Hooks 
 
-[live link](https://flexisaftask5.vercel.app/)
+[Live link](https://flexisaftask5.vercel.app/)
 ## Introduction
 
 React Hooks allow functional components to use state, lifecycle
