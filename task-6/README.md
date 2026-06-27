@@ -1,16 +1,93 @@
-# React + Vite
+# Recipe Hub
+## ![Live link]()
+## Overview
+Recipe Hub is a React application that fetches recipe data from the DummyJSON API and lets users search recipes with **debounced search**. Clicking a result displays its details.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Concepts Covered
 
-Currently, two official plugins are available:
+### JSON
+The app requests JSON from:
+`https://dummyjson.com/recipes`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Example:
+```json
+{
+  "id": 1,
+  "name": "Classic Margherita Pizza",
+  "ingredients": ["Flour","Cheese"],
+  "instructions": ["Prepare dough","Bake"]
+}
+```
 
-## React Compiler
+`response.json()` converts the HTTP response into a JavaScript object.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Async/Await
+```js
+const response = await fetch("https://dummyjson.com/recipes");
+const data = await response.json();
+```
+`await` pauses until each Promise resolves, making asynchronous code easier to read.
 
-## Expanding the ESLint configuration
+### Promises
+- `fetch()` returns a Promise.
+- `response.json()` also returns a Promise.
+- `await` waits for those Promises before continuing.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Form Data
+The search input is a **controlled component**.
+
+```jsx
+<input
+  value={query}
+  onChange={handleChange}
+/>
+```
+
+```js
+function handleChange(e){
+  setQuery(e.target.value);
+}
+```
+
+React stores the current input inside state instead of reading directly from the DOM.
+
+### Debouncing
+The app waits 1 second after typing before searching.
+
+```js
+useEffect(()=>{
+  const timeoutId = setTimeout(()=>{
+    setDebounceQuery(queryCleanUp(query));
+  },1000);
+
+  return ()=>clearTimeout(timeoutId);
+},[query]);
+```
+
+Benefits:
+- Reduces unnecessary filtering
+- Improves performance
+- Better user experience
+
+### Filtering
+```js
+data.filter(recipe =>
+  recipe.name.toLowerCase().includes(debounceQuery)
+);
+```
+
+### Conditional Rendering
+The recipe card only appears when a recipe is selected.
+
+### React Hooks Used
+- useState
+- useEffect
+
+## Learning Outcomes
+- Fetch API data
+- Work with JSON
+- Understand Promises and async/await
+- Manage controlled forms
+- Debounce user input
+- Filter arrays
+- Render UI conditionally
