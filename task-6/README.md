@@ -1,5 +1,5 @@
 # Recipe Hub
-## ![Live link]()
+## [Live link](https://flexisaftask6.vercel.app/)
 ## Overview
 Recipe Hub is a React application that fetches recipe data from the DummyJSON API and lets users search recipes with **debounced search**. Clicking a result displays its details.
 
