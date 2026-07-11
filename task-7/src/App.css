@@ -1,0 +1,57 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+}
+#root .home{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: justify;
+  min-height: 93dvh;
+  max-width: 40rem;
+  padding: 1rem;
+}
+
+header div{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block-end: 1rem;
+}
+
+button{
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.buttons{
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  text-align: center;
+}
+
+.buttons > *{
+  border: 2px black solid; 
+  width: 50%;
+  padding: .5rem;
+}
+
+main h2, p{
+  margin-block-end: 1rem;
+}
+
+footer div{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-block-start: 1rem;
+}
+
