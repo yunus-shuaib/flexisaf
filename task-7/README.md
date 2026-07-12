@@ -8,7 +8,7 @@ A simple React project demonstrating two of the most common approaches to **glob
 The application allows you to switch between both implementations at runtime to observe how each approach manages the same application state.
 
 ---
-## [Live]()
+## [Live](https://flexisaftask7.vercel.app/)
 
 # Project Objective
 
