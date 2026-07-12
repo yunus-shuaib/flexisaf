@@ -1,5 +1,5 @@
 import Context from "./context/Context.jsx";
-import Redux from "./redux/Redux.jsx";
+import Redux from "./redux/components/Redux.jsx";
 import {useState} from "react";
 import './App.css'
 
