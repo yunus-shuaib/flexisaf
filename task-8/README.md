@@ -1,6 +1,6 @@
 # React Task Manager (Material UI Edition)
 
-## (Live)[https://flexisaftask8.vercel.app/]
+## [Live](https://flexisaftask8.vercel.app/)
 A modern, responsive, and intuitive **Task Management Application** built using **React** and styled exclusively with **Material UI (MUI)**. This application provides a seamless task creation, inline editing, and deletion workflow backed by a clean component architecture.
 
 ---
